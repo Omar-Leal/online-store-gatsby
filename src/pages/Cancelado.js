@@ -12,6 +12,9 @@ const Cancelado = () => {
 									<h2>Has decidio no comprar</h2>
 									<p>Regresa al catalogo para una mejor decisión</p>
 									<p>Sabemos que algo quieres</p>
+									<span role="img">
+									  ❤
+									</span>
 									<Link to='/'>
 															<Button>
 																			Regresar al Home

@@ -11,11 +11,7 @@ export const colors = {
 }
 
 export const StyledHeader = styled.header`
-  background-image: linear-gradient(
-    90deg,
-    ${colors.darkBlue},
-    ${colors.lightBlue}
-  );
+  background-color: #1F1F1F;
   margin-bottom: 0;
   padding: 0 0.5rem 0 0;
   height: 3.5rem;
@@ -32,9 +28,9 @@ export const StyledHeader = styled.header`
   }
   & > a > img {
     margin: 0;
-    background-color: ${colors.green};
+    
     height: 100%;
-    padding: 0.5rem 0.8rem;
+    padding: 0.1rem 0.8rem;
   }
   & ul {
     list-style: none;
@@ -65,7 +61,7 @@ export const StyledJumbo = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 2rem 2rem;
-  color: white;
+  color: #E5C687;
   margin-bottom: 5rem;
   overflow: hidden;
   position: relative;
@@ -80,8 +76,9 @@ export const StyledJumbo = styled.div`
     font-size: 1rem;
   };
   & small{
-    font-weight: 100;
-    font-size: 0.6rem;
+    font-weight: 300;
+    font-size: 0.8rem;
+    opacity: 0.5;
   };
   & img{
     width: 35vw;
@@ -119,7 +116,7 @@ export const StyledJumbo = styled.div`
   &:before{
     content: " ";
     background-color: red;
-    background-color: ${colors.darkBlue};
+    background-color: #121619;
     z-index: -1;
     position: absolute;
     transform: rotate(-19deg);
