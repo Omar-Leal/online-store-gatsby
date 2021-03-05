@@ -14,7 +14,7 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
           <Footer>
-            © {new Date().getFullYear()}, Built with dedication by:          
+            © {new Date().getFullYear()}| made with dedication by         
             <a href="https://omar-leal.github.io/">Omar Leal</a>
           </Footer>
         </Content>

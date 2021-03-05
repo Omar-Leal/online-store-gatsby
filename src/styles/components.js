@@ -326,8 +326,8 @@ export const MenuItem = styled.li`
 `
 
 export const Footer = styled.footer`
-  background-color: ${colors.darkBlue};
-  color: white;
+  background-color: #1E1F22;
+  color: #E5C687;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,7 +335,7 @@ export const Footer = styled.footer`
   position: relative;
   bottom: 0;
   a {
-    color: ${colors.green};
+    color: #E5C687;
     margin-left: 0.3rem;
     text-decoration: none;
   }
