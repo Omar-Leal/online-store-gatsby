@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => (
           </MenuItem>  
 
           <MenuItem margin >
-                    <a href='https://www.amazon.com/'>Platzi</a>
+                    <a href='https://www.amazon.com/'>Amazon</a>
           </MenuItem>
 
           <MenuItem>

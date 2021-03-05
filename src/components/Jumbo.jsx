@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyledJumbo } from '../styles/components';
-
+import {Image } from './';
 
 
 const Jumbo = (props) => {
@@ -12,6 +12,7 @@ const Jumbo = (props) => {
 				<h2>!Consigue el mejor Swag exclusivo!</h2>
 				<small>{heading2}</small>
 			</div>
+			<Image name='logo' /> 
 		</StyledJumbo>
 	)
 }
