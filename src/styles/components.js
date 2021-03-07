@@ -11,7 +11,7 @@ export const colors = {
 }
 
 export const StyledHeader = styled.header`
-  background-color: #1E1F22;
+  background-color: #191a1c;
   margin-bottom: 0;
   padding: 0 0.5rem 0 0;
   height: 3.5rem;
@@ -61,7 +61,7 @@ export const StyledJumbo = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 2rem 2rem;
-  color: #E5C687;
+  color: white;
   margin-bottom: 5rem;
   overflow: hidden;
   position: relative;
@@ -116,7 +116,7 @@ export const StyledJumbo = styled.div`
   &:before{
     content: " ";
     background-color: red;
-    background-color: #121619;
+    background-color: #1E1F22;
     z-index: -1;
     position: absolute;
     transform: rotate(-19deg);
@@ -148,7 +148,7 @@ export const StyledProducts = styled.div`
   align-items: center;
   padding: 2rem 1rem 5rem 1rem;
   h2 {
-    color: ${colors.darkBlue};
+    color: white;
     font-size: 2rem;
   }
   & img {
@@ -168,18 +168,18 @@ export const StyledProducts = styled.div`
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     p {
       margin: 0;
-      color: ${colors.green};
+      color: white;
       font-weight: 500;
       font-size: 1.2rem;
     }
     small {
-      color: ${colors.darkBlue};
+      color: white;
       font-weight: 500;
       font-size: 1.2rem;
     }
     a {
       text-decoration: none;
-      color: ${colors.darkBlue};
+      color: white;
       font-size: 0.8rem;
       border-bottom: 3px solid ${colors.green};
       span {

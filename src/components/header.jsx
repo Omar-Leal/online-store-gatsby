@@ -4,12 +4,12 @@ import React from "react"
 import { MenuItem, StyledHeader } from '../styles/components'
 
 import Cart from '../images/assets/cart.png'
-import logo from '../images/assets/logo.png'
+import mainlogo from '../images/header-logo.png'
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
     <Link to='/'>
-      <img src={logo}  alt="Store_Logo"/>
+      <img src={mainlogo}  alt="Store_Logo"/>
     </Link>
     <nav>
       <ul>

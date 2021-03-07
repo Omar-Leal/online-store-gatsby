@@ -18,7 +18,7 @@ const Image = ({ name }) => {
 }
 		
 `}
-render={data =><Img fluid={data[name].childImageSharp.fluid} />}
+render={data => <Img fluid={data[name].childImageSharp.fluid} />}
 />
 	)	
 }
