@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   siteMetadata: {
     title: `SwagStore, the best coats for lifestyle`,
@@ -39,10 +43,12 @@ module.exports = {
     {
       resolve: `gatsby-source-stripe`,
       options: {
-        objects: ['Sku'],
+        objects: ['Price'],
         secretKey: process.env.STRIPE_SK
       }
     },
     
   ],
 }
+
+

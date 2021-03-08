@@ -148,17 +148,18 @@ export const StyledProducts = styled.div`
   align-items: center;
   padding: 2rem 1rem 5rem 1rem;
   h2 {
-    color: white;
+    color: black;
     font-size: 2rem;
   }
   & img {
-    width: 100%;
-    height: 400px;
+    width: 50%;
+    height: 200px;
     object-fit: cover;
     object-position: center;
     margin: 0;
   }
   article {
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     background: white;
@@ -168,18 +169,18 @@ export const StyledProducts = styled.div`
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     p {
       margin: 0;
-      color: white;
+      color: black;
       font-weight: 500;
       font-size: 1.2rem;
     }
     small {
-      color: white;
+      color: black;
       font-weight: 500;
       font-size: 1.2rem;
     }
     a {
       text-decoration: none;
-      color: white;
+      color: black;
       font-size: 0.8rem;
       border-bottom: 3px solid ${colors.green};
       span {
