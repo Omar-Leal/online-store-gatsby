@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import priceFormat from '../utils/priceFormat'
 import { 
 	Tag, 
-	SizeButton, 
-	QtyButton, 
+	SizeButton, 	
 	SizeSelect, 
-	/*Button, */
+	Button, 
 	StyledProductDetail,
 	QtySelect 
 } from '../styles/components'
@@ -24,18 +23,19 @@ const ProductDetail = ({
 	return (
 	  <StyledProductDetail>
 				<SEO title={name} />
-				<img src={metadata.img} />
+				<img src={metadata.img} alt={name}/>
 				<div>
 					<Tag>Rating</Tag>
-					<h2>product.name</h2>
+					<h2>{name}</h2>
 					<b>USB {FormattedPrice}</b>
 					<Stars /> 
+					<small>{metadata.description_}</small>
 					{metadata.wear && (
 						<SizeSelect selected={size} >
-							<SizeButton onClick={() => setSize(1)}>XS</SizeButton>
-							<SizeButton onClick={() => setSize(2)}>S</SizeButton>
-							<SizeButton onClick={() => setSize(3)}>M</SizeButton>
-							<SizeButton onClick={() => setSize(4)}>L</SizeButton>
+							<SizeButton onClick={(e) => setSize(1)}>XS</SizeButton>
+							<SizeButton onClick={(e) => setSize(2)}>S</SizeButton>
+							<SizeButton onClick={(e) => setSize(3)}>M</SizeButton>
+							<SizeButton onClick={(e) => setSize(4)}>L</SizeButton>
 						</SizeSelect>
 					)}
 					<p>Cantidad: </p>
@@ -44,6 +44,9 @@ const ProductDetail = ({
 						<input type='text' disable value={qty} />
 						<button onClick={() => setQty(qty+1)} >+</button>
 					</QtySelect>
+					<Button>
+						Add to wish list
+					</Button>
 				</div>
 		</StyledProductDetail>
 	)
