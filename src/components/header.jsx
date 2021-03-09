@@ -8,7 +8,7 @@ import { CartContext } from '../context'
 
 const Header = () => {
   const { cart } = useContext(CartContext);
-  console.log('context?:', cart);
+  console.log('context?==>:', cart);
   return (
     <StyledHeader>
             <Link to='/'>
@@ -21,9 +21,10 @@ const Header = () => {
                   <MenuItem>
                     <Link to='/cart'>
                       <span>
-                        <img src={Cart} alt='Cart' />
+                        <img src={Cart} alt='Cart' />                        
+                        {cart.length}
                       </span>
-                      <h3>{cart.lenght}</h3>    
+                         
                     </Link>           
                   </MenuItem>
               </ul>
