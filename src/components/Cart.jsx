@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import { Button, StyledCart } from '../styles/components'
 import priceFomart from '../utils/priceFormat'
@@ -11,12 +11,37 @@ const Cart = () => {
 	const { cart } = useContext(CartContext)
 
 	const [ total, setTotal ] = useState(0)
+	const [stripe, setStripe] = useState()
 
 	const getTotal = () => {
 		setTotal(
 			cart.reduce((acc, current) => acc + current.unit_amount * current.quantity, 0)
 		)
 	}
+
+	useEffect(() => {
+
+		setStripe(
+			window.Stripe(process.env.STRIPE_PK)
+		)
+		getTotal()
+		
+	}, [])
+
+	 const handleSubmit = async e => {
+		 e.preventDefault()
+
+		
+					const { error } = await stripe.redirectToCheckout({
+						lineItems: cart.map(({ id, quantity }) => ({ price: id, quantity})),
+						mode: "subscription",
+						successUrl: process.env.SUCCESS_REDIRECT,
+						cancelUrl: process.env.CANCEL_REDIRECT,
+					})
+					if (error) {
+						throw error
+					}
+	 }
 	
 		return (
 			<StyledCart>
@@ -30,7 +55,7 @@ const Cart = () => {
 							<th>Total</th>
 						</tr>
 						{cart.map(swag => (
-							<tr key={swag.sku}>
+							<tr key={swag.id}>
 									<td>
 										<img src={swag.metadata.img} alt={swag.name}/>
 										{swag.name}
@@ -55,7 +80,7 @@ const Cart = () => {
 								Come Back
 							</Button>
 						</Link>
-						<Button>
+						<Button onClick={handleSubmit}  disabled={cart.length === 0}>
 							Buy now
 						</Button>
 					</div>
