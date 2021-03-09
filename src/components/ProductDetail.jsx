@@ -24,7 +24,7 @@ const ProductDetail = ({
 	const { addToCart, cart } = useContext(CartContext)
 
 		const handleSubmit = () => {
-			addToCart({ id, name, metadata })
+			addToCart({ id, unit_amount, name, metadata, quantity: qty })
 		}
 
 	return (
@@ -51,7 +51,7 @@ const ProductDetail = ({
 						<input type='text' disabled value={qty} />
 						<button onClick={() => setQty(qty+1)} >+</button>
 					</QtySelect>
-					<Button >
+					<Button onClick={handleSubmit}>
 						Add to wish list
 					</Button>
 				</div>

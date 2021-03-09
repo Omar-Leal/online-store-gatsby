@@ -2,9 +2,8 @@ import React from 'react'
 import { Cart } from '../components'
 
 const cart = () => {
- return (
-	 <Cart />
- )
+ return <Cart />	 
+ 
 }
 
-export default Cart;
+export default cart;

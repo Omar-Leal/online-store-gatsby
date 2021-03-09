@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'gatsby'
 import { Button, StyledCart } from '../styles/components'
 import priceFomart from '../utils/priceFormat'
-import { CartContext } from '../context.js'
+import { CartContext } from '../context'
 
 
 
@@ -30,12 +30,13 @@ const Cart = () => {
 							<th>Total</th>
 						</tr>
 						{cart.map(swag => (
-							<tr key={swag.id}>
+							<tr key={swag.sku}>
 									<td>
-										<img src={swag.metadata.img} src={swag.name}/>
+										<img src={swag.metadata.img} alt={swag.name}/>
+										{swag.name}
 									</td>
 									<td>
-										USD {swag.unit_amount}
+										USD {priceFomart(swag.unit_amount)}
 									</td>
 									<td>{swag.quantity}</td>
 									<td>{priceFomart(swag.quantity * swag.unit_amount)}</td>
@@ -46,7 +47,7 @@ const Cart = () => {
 				<nav>
 					<div>
 						<h3>Subtotal: </h3>
-						<small>USD {total}</small>
+						<small>Total {total}</small>
 					</div>
 					<div>
 						<Link to='/'>

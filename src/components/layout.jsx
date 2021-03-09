@@ -13,10 +13,10 @@ const Layout = ({ children }) => (
           
         >
           <main>{children}</main>
-          <Footer>
+          {/* <Footer>
             © {new Date().getFullYear()}| made with dedication by         
             <a href="https://omar-leal.github.io/">Omar Leal</a>
-          </Footer>
+          </Footer> */}
         </Content>
       </>
     
